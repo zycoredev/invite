@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reader - PanelFlow</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="page-reader">
+  <header class="reader-header">
+    <a class="logo" href="index.html">PanelFlow</a>
+    <div class="reader-controls">
+      <button id="backButton" class="btn secondary">&larr; Library</button>
+      <select id="chapterSelect" aria-label="Select chapter"></select>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+    </div>
+  </header>
+
+  <main class="reader-main">
+    <article class="reader-meta">
+      <h1 id="seriesTitle"></h1>
+      <h2 id="chapterTitle"></h2>
+    </article>
+    <section id="pageContainer" class="page-container" aria-live="polite"></section>
+    <nav class="reader-pagination">
+      <button id="prevChapter" class="btn secondary">Previous Chapter</button>
+      <button id="nextChapter" class="btn primary">Next Chapter</button>
+    </nav>
+  </main>
+
+  <footer class="reader-footer">
+    <p id="readingProgress">Scroll to read. Progress saves automatically.</p>
+  </footer>
+
+  <script type="module" src="assets/js/theme.js"></script>
+  <script type="module" src="assets/js/storage.js"></script>
+  <script type="module" src="assets/js/reader.js"></script>
+</body>
+</html>

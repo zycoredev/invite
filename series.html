@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series Library - PanelFlow</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="page-series">
+  <header class="site-header">
+    <div class="logo">PanelFlow</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="series.html" class="active">Series</a>
+      <a href="admin.html">Upload</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+  </header>
+
+  <main class="page-content">
+    <header class="section-header">
+      <h1>All Series</h1>
+      <div class="filter-group">
+        <input type="search" id="seriesSearch" placeholder="Search series..." />
+      </div>
+    </header>
+    <div id="seriesGrid" class="series-grid hidden"></div>
+    <p id="emptyState" class="empty-state hidden">No series yet. Upload via the admin panel.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> PanelFlow.</p>
+  </footer>
+
+  <script type="module" src="assets/js/theme.js"></script>
+  <script type="module" src="assets/js/storage.js"></script>
+  <script type="module" src="assets/js/series.js"></script>
+</body>
+</html>

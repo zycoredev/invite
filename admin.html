@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Dashboard - PanelFlow</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="page-admin">
+  <header class="site-header">
+    <div class="logo">PanelFlow</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="series.html">Series</a>
+      <a href="admin.html" class="active">Upload</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+  </header>
+
+  <main class="page-content">
+    <header class="section-header">
+      <h1>Upload Manager</h1>
+      <p>Drag & drop chapter images or use the upload buttons. Pages are sorted automatically.</p>
+    </header>
+
+    <section class="upload-panel">
+      <form id="uploadForm" class="upload-form">
+        <div class="field-group">
+          <label for="seriesTitle">Series Title</label>
+          <input id="seriesTitle" name="seriesTitle" type="text" required placeholder="Enter series name" />
+        </div>
+        <div class="field-group">
+          <label for="seriesDescription">Series Description</label>
+          <textarea id="seriesDescription" name="seriesDescription" rows="3" placeholder="Optional blurb"></textarea>
+        </div>
+        <div class="field-group">
+          <label for="coverImage">Cover Image</label>
+          <input id="coverImage" name="coverImage" type="file" accept="image/png, image/jpeg" />
+        </div>
+        <div class="field-group">
+          <label for="chapterTitle">Chapter Title</label>
+          <input id="chapterTitle" name="chapterTitle" type="text" required placeholder="Chapter name or number" />
+        </div>
+        <div class="field-group">
+          <label>Chapter Images</label>
+          <div id="dropZone" class="drop-zone" tabindex="0">Drop images here or click to browse</div>
+          <input id="chapterImages" name="chapterImages" type="file" accept="image/png, image/jpeg" multiple hidden />
+          <ul id="fileList" class="file-list"></ul>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Save Chapter</button>
+          <button type="button" id="clearLibrary" class="btn danger">Reset Library</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="library-overview">
+      <h2>Library Overview</h2>
+      <div id="libraryList" class="library-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> PanelFlow.</p>
+  </footer>
+
+  <script type="module" src="assets/js/theme.js"></script>
+  <script type="module" src="assets/js/storage.js"></script>
+  <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

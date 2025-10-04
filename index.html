@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manhwa Reader</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="page-home">
+  <header class="site-header">
+    <div class="logo">PanelFlow</div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="series.html">Series</a>
+      <a href="admin.html">Upload</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+  </header>
+
+  <main class="home-content">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Discover Fresh Manhwa Adventures</h1>
+        <p>Browse, read, and manage chapters with a smooth vertical experience designed for both desktop and mobile readers.</p>
+        <div class="cta-group">
+          <a class="btn primary" href="series.html">Browse Series</a>
+          <a class="btn secondary" href="admin.html">Upload Chapters</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
+    </section>
+
+    <section class="library">
+      <header class="section-header">
+        <h2>Continue Reading</h2>
+        <div class="filter-group">
+          <input type="search" id="seriesSearch" placeholder="Search series..." />
+        </div>
+      </header>
+      <div id="seriesGrid" class="series-grid hidden"></div>
+      <p id="emptyState" class="empty-state hidden">Upload your first series to get started.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> PanelFlow. Crafted for immersive reading.</p>
+  </footer>
+
+  <script type="module" src="assets/js/theme.js"></script>
+  <script type="module" src="assets/js/storage.js"></script>
+  <script type="module" src="assets/js/home.js"></script>
+</body>
+</html>
